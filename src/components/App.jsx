@@ -5,7 +5,6 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar'
-import { BrowserRouter as Router,  Route } from "react-router-dom"
 import {Switch } from "react-router-dom"
 import { PortfolioProvider } from '../context/context';
 
@@ -28,8 +27,7 @@ function App() {
   }, []);
 
   return (
-    <><Router>
-      <Switch> 
+    
         <PortfolioProvider value={{ hero, about, projects, contact, footer }}><Navbar/>
     
    
@@ -40,11 +38,8 @@ function App() {
       <Contact />
       <Footer />
     </PortfolioProvider>
-      </Switch>
-      </Router>
     
     
-    </>
   );
 }
 
